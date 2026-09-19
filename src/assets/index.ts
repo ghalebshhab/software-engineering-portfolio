@@ -1,0 +1,12 @@
+export { default as Image } from './images/Screenshot 2026-01-05 211541.png';
+export { default as Image2 } from './images/Screenshot 2026-01-07 231901.png';
+export { default as Image3 } from './images/Screenshot 2026-01-07 231810.png';
+export { default as Image4 } from './images/Selinium.png';
+export { default as Image5 } from './images/Selinium-proj.png';
+export { default as Image6 } from './images/Step-Certificate.png';
+export { default as Image7 } from './images/spring-boot-certificate.jpg';
+export { default as yourImage } from './images/Me-6.jpeg';
+export { default as JoMapImage } from './images/Jomap-pict.png';
+export { default as AutomationImage } from './images/qa_automation_project_banner.png';
+export const SwCv = `${import.meta.env.BASE_URL}Ghaleb_Shhab_CV_Final.pdf`;
+export const QaCv = `${import.meta.env.BASE_URL}Ghaleb_Shhab_CV_v2.pdf`;

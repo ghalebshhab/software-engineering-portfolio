@@ -1,0 +1,107 @@
+/* Themes: component styles and responsive behavior. */
+
+:root[data-theme='light'] {
+  color-scheme: light;
+  --bg: #f5f7fc;
+  --bg1: #edf1f8;
+  --bg2: #ffffff;
+  --bg3: #e7edf6;
+  --card: rgba(255, 255, 255, 0.92);
+  --border: rgba(28, 49, 79, 0.13);
+  --border2: rgba(28, 49, 79, 0.23);
+  --text: #18263c;
+  --text2: #465c76;
+  --text3: #526984;
+  --cyan: #007d78;
+  --cyan-dim: #006e68;
+  --cyan-line: rgba(0, 125, 120, 0.25);
+  --cyan-glow: rgba(0, 125, 120, 0.12);
+  --purple: #6d28d9;
+  --green: #16803d;
+  --grad: linear-gradient(135deg, #6d28d9, #007d78);
+}
+[data-theme='light'] .top-nav {
+  background: rgba(250, 252, 255, 0.94);
+  box-shadow: 0 8px 30px rgba(32, 55, 85, 0.1);
+}
+[data-theme='light']
+  :is(
+    .glass-card,
+    .skill-category,
+    .project-card,
+    .certification-card,
+    .resume-panel,
+    .terminal-window
+  ) {
+  background: var(--card);
+  box-shadow: 0 10px 35px rgba(32, 55, 85, 0.06);
+}
+[data-theme='light']
+  :is(
+    .terminal-header,
+    .loader-terminal-bar,
+    .loader-command,
+    .orbit-chip,
+    .tag,
+    .edu-tag,
+    .project-filter,
+    .project-links a,
+    .code-tag
+  ) {
+  background: var(--bg1);
+  color: var(--text2);
+  border-color: var(--border2);
+}
+[data-theme='light'] .contact-section {
+  background:
+    radial-gradient(
+      ellipse at 15% 10%,
+      rgba(109, 40, 217, 0.06),
+      transparent 60%
+    ),
+    var(--bg1);
+}
+[data-theme='light'] #loader {
+  background:
+    radial-gradient(
+      circle at 20% 15%,
+      rgba(109, 40, 217, 0.08),
+      transparent 50%
+    ),
+    var(--bg);
+}
+[data-theme='light'] .loader-terminal {
+  background: var(--bg2);
+  border-color: var(--border2);
+  box-shadow: 0 25px 80px rgba(32, 55, 85, 0.15);
+}
+[data-theme='light'] .loader-progress-track {
+  background: var(--bg3);
+}
+[data-theme='light'] .btn-primary {
+  color: #fff;
+  background: var(--grad);
+}
+[data-theme='light'] .btn-secondary {
+  color: var(--cyan);
+  background: transparent;
+}
+[data-theme='light'] :is(.project-art, .project-art--salon, .project-media) {
+  background-color: var(--bg1);
+}
+[data-theme='light'] .architecture-flow {
+  color: var(--purple);
+}
+[data-theme='light'] .architecture-flow > span {
+  border-color: var(--border2);
+}
+[data-theme='light'] .project-filter.active {
+  color: var(--cyan);
+  background: var(--cyan-glow);
+}
+[data-theme='light'] .project-links a:hover {
+  color: var(--cyan);
+}
+[data-theme='light'] .photo-neon-inner {
+  background: var(--bg2);
+}

@@ -1,0 +1,101 @@
+/* Education: component styles and responsive behavior. */
+
+.education-summary {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.education-icon {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--purple);
+  font-size: 1.4rem;
+  background: var(--surface);
+  flex-shrink: 0;
+}
+.education-summary .eyebrow {
+  color: var(--text3);
+  margin-bottom: 10px;
+  font-size: 0.66rem;
+}
+.education-summary h3 {
+  font-size: 1.35rem;
+  margin-bottom: 9px;
+}
+.education-summary p:not(.eyebrow) {
+  color: var(--text3);
+  font-size: 0.88rem;
+}
+.education-gpa {
+  margin-left: auto;
+  padding-left: 24px;
+  border-left: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 162px;
+}
+.education-gpa strong {
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+.education-gpa strong span {
+  font-size: 0.85rem;
+  color: var(--text3);
+}
+.education-gpa > span {
+  color: var(--text3);
+  font-size: 0.76rem;
+}
+@media (max-width: 700px) {
+  .education-summary {
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+  .education-summary h3 {
+    font-size: 1.14rem;
+  }
+  .education-gpa {
+    margin-left: 74px;
+    border-left: 0;
+    padding-left: 0;
+  }
+}
+@media (max-width: 420px) {
+  .education-icon {
+    width: 42px;
+    height: 42px;
+  }
+  .education-summary > div:nth-child(2) {
+    flex: 1;
+    min-width: 0;
+  }
+  .education-gpa {
+    margin-left: 60px;
+  }
+}
+.education-summary {
+  background: var(--card);
+  border: 1px solid var(--border2);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+@media (max-width: 600px) {
+  .education-summary {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  .education-gpa {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+}

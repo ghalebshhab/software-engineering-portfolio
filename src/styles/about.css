@@ -1,0 +1,164 @@
+/* About: component styles and responsive behavior. */
+
+.about-layout {
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: 72px;
+}
+.about-copy {
+  color: var(--text2);
+}
+.about-copy p + p {
+  margin-top: 18px;
+}
+.about-copy .about-lead {
+  font-size: 1.15rem;
+  color: var(--text);
+  line-height: 1.65;
+}
+.about-copy strong {
+  color: var(--text);
+  font-weight: 500;
+}
+@media (max-width: 1100px) {
+  .about-layout {
+    gap: 40px;
+  }
+}
+@media (max-width: 700px) {
+  .about-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+  .about-copy .about-lead {
+    font-size: 1.08rem;
+  }
+}
+.terminal-window {
+  background: #050d16;
+  border-radius: 18px;
+  overflow: hidden;
+  font-family: 'JetBrains Mono', monospace;
+}
+.terminal-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 20px;
+  background: #0a1220;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.terminal-title {
+  margin-left: 8px;
+  color: var(--text3);
+  font-size: 0.82rem;
+}
+.terminal-body {
+  padding: 28px 32px;
+  line-height: 2.1;
+}
+.terminal-line {
+  color: var(--text);
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.terminal-line:first-child {
+  margin-top: 0;
+}
+.prompt {
+  color: var(--cyan);
+  font-weight: 700;
+  font-size: 1rem;
+}
+.terminal-output {
+  color: var(--text2);
+  padding-left: 26px;
+  margin-top: 6px;
+}
+.terminal-output.status {
+  color: var(--blue);
+  font-weight: 600;
+}
+.cursor {
+  display: inline-block;
+  width: 9px;
+  height: 18px;
+  background: var(--cyan);
+  margin-left: 4px;
+  border-radius: 2px;
+  animation: blink 1s step-end infinite;
+}
+@media (max-width: 768px) {
+  .terminal-body {
+    padding: 18px 20px;
+  }
+}
+.terminal-window,
+.terminal-body {
+  min-width: 0;
+  max-width: 100%;
+}
+.terminal-output {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+@media (max-width: 768px) {
+  .terminal-body {
+    font-size: 0.82rem;
+  }
+
+  .terminal-line {
+    white-space: normal;
+  }
+
+  .terminal-output {
+    white-space: normal;
+  }
+
+  .terminal-output {
+    padding-left: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .about-card {
+    padding: 0;
+  }
+
+  .terminal-header {
+    padding-inline: 12px;
+  }
+
+  .terminal-title {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .terminal-body {
+    padding: 16px 14px;
+    font-size: 0.76rem;
+  }
+}
+.about-layout {
+  display: block;
+}
+.about-card {
+  overflow: hidden;
+  padding: 0;
+}
+.terminal-body .terminal-output {
+  margin-bottom: 20px;
+}
+.about-copy {
+  padding: 0 0 24px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+@media (max-width: 480px) {
+  .about-card {
+    border-radius: 14px;
+  }
+}
