@@ -5,6 +5,8 @@ export { default as Image4 } from './images/Selinium.png';
 export { default as Image5 } from './images/Selinium-proj.png';
 export { default as Image6 } from './images/Step-Certificate.png';
 export { default as Image7 } from './images/spring-boot-certificate.jpg';
+export { default as Claude101Certificate } from './images/claude-academy/claude-101.webp';
+export { default as ClaudeCode101Certificate } from './images/claude-academy/claude-code-101.webp';
 export { default as yourImage } from './images/Me-6.jpeg';
 export { default as JoMapImage } from './images/Jomap-pict.png';
 export { default as AutomationImage } from './images/qa_automation_project_banner.png';

@@ -10,12 +10,14 @@ export type SectionId =
 export type ProjectCategory = 'fullstack' | 'frontend' | 'qa';
 export interface Certification {
   readonly id: number;
+  readonly category: 'development' | 'quality';
   readonly title: string;
   readonly issuer: string;
   readonly date: string;
   readonly desc: string;
   readonly image: string;
   readonly credential?: string;
+  readonly verification?: string;
 }
 export interface Project {
   readonly id: string;
