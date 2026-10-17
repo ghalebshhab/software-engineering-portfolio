@@ -6,12 +6,39 @@ import {
   Image5,
   Image6,
   Image7,
+  Claude101Certificate,
+  ClaudeCode101Certificate,
 } from '../../../assets';
 import type { Certification } from '../types';
 export const portfolioData = {
   certifications: [
     {
+      id: 8,
+      category: 'development',
+      title: 'Claude Code 101',
+      issuer: 'Claude Academy',
+      date: '2026',
+      desc: 'Completed foundational training in Claude Code workflows and AI-assisted software development.',
+      image: ClaudeCode101Certificate,
+      credential: `${import.meta.env.BASE_URL}certificates/claude-academy-claude-code-101.pdf`,
+      verification:
+        'https://academy.claude.com/verify/e77a073b711aa19e00ebd22e5431cccc',
+    },
+    {
+      id: 9,
+      category: 'development',
+      title: 'Claude 101',
+      issuer: 'Claude Academy',
+      date: '2026',
+      desc: 'Completed foundational training in working effectively with Claude and applying AI capabilities responsibly.',
+      image: Claude101Certificate,
+      credential: `${import.meta.env.BASE_URL}certificates/claude-academy-claude-101.pdf`,
+      verification:
+        'https://academy.claude.com/verify/1d298eab27d582e7284ace966412c33f',
+    },
+    {
       id: 1,
+      category: 'quality',
       title: 'Web QA Automation Testing',
       issuer: 'Training Program',
       date: '2025',
@@ -21,6 +48,7 @@ export const portfolioData = {
     },
     {
       id: 2,
+      category: 'quality',
       title: 'Selenium Automation Course',
       issuer: 'Training Program',
       date: '2025',
@@ -30,6 +58,7 @@ export const portfolioData = {
     },
     {
       id: 3,
+      category: 'quality',
       title: 'Selenium Automation Project',
       issuer: 'Practical Project',
       date: '2025',
@@ -39,6 +68,7 @@ export const portfolioData = {
     },
     {
       id: 4,
+      category: 'quality',
       title: 'QA Manual Testing',
       issuer: 'Training Program',
       date: '2025',
@@ -48,6 +78,7 @@ export const portfolioData = {
     },
     {
       id: 5,
+      category: 'quality',
       title: 'Postman API Testing Course',
       issuer: 'Training Program',
       date: '2025',
@@ -57,6 +88,7 @@ export const portfolioData = {
     },
     {
       id: 6,
+      category: 'quality',
       title: 'Postman API Automation Project',
       issuer: 'Practical Project',
       date: '2025',
@@ -66,6 +98,7 @@ export const portfolioData = {
     },
     {
       id: 7,
+      category: 'development',
       title: 'Master Spring Boot 4, Spring 7 & Hibernate 7',
       issuer: 'Udemy',
       date: '2026',
@@ -76,7 +109,7 @@ export const portfolioData = {
   ],
 } satisfies { certifications: readonly Certification[] };
 
-const certificationOrder = [7, 1, 5, 3, 4, 6, 2];
+const certificationOrder = [8, 9, 7, 1, 5, 3, 4, 6, 2];
 export const certifications = [...portfolioData.certifications].sort(
   (a, b) => certificationOrder.indexOf(a.id) - certificationOrder.indexOf(b.id),
 );
